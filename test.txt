@@ -1,0 +1,39 @@
+sigma sigma on the wall
+whos the skibides of them all
+try {
+            FileWriter fw = new FileWriter("test.txt");
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write("sigma sigma on the wall\n");
+            bw.write("whos the skibides of them all");
+            bw.close();
+            FileReader fr = new FileReader("test.txt");
+            BufferedReader br = new BufferedReader(fr);
+            while(true){
+                String line = br.readLine();
+                if(line == null)
+                    break;
+                System.out.println(line);
+            }
+            br.close();
+
+//            InputStreamReader is = new InputStreamReader(System.in);
+//            BufferedReader stdbr = new BufferedReader(is);
+//            System.out.println(is.re);
+            FileOutputStream fileOutputStream = new FileOutputStream("anyad.gz");
+            GZIPOutputStream gzipOutputStream = new GZIPOutputStream(fileOutputStream);
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(gzipOutputStream);
+            outputStreamWriter.write("cigany");
+            outputStreamWriter.close();
+
+            FileInputStream fis = new FileInputStream("anyad.gz");
+            GZIPInputStream gz = new GZIPInputStream(fis);
+            InputStreamReader isr = new InputStreamReader(gz);
+            BufferedReader asd = new BufferedReader(isr);
+            System.out.println(asd.readLine());
+            isr.close();
+
+
+
+        }catch(IOException e){
+            System.out.println(e.fillInStackTrace());
+        }
