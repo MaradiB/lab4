@@ -2,8 +2,8 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public class Main {
-
+public class Main { 
+//asd
     static ArrayList<Beer> beers = new ArrayList<>();
 
     protected static void add(String[] cmd){
